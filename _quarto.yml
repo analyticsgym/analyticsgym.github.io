@@ -8,8 +8,10 @@ project:
 
 website:
   title: " "
+  search: false
   navbar:
     background: "#FAFAF8"
+    search: false
     right:
       - text: "Mental Models"
         href: index.qmd
