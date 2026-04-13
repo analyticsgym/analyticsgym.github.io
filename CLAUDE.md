@@ -2,23 +2,23 @@
 
 ## Site Purpose
 
-How I think and what I ship.
+A personal, open reference: mental models I find useful, and lessons from building and shipping. Kept public so I can point others to it and so past-me keeps teaching present-me. Written for myself first — if it's also useful to a teammate or a stranger, good.
 
 ## Content Sections
 
-**Mental Models** — Living reference library of frameworks for growth decisions, experimentation judgment, and analytical reasoning. The thing you send a team member to explain why you'd approach a problem a certain way. Updated over time.
+**Mental Models** — Frameworks I reach for when thinking about growth, experimentation, monetization, and analytical problems. A living reference I add to over time. The thing I'd send someone to explain why I'd approach a problem a certain way.
 
-**Ship Notes** — Lessons from tools built, experiments designed, and analysis shipped. AI and automation show up here naturally as the accelerant. Each note anchored to a real problem and what you learned.
+**Ship Notes** — What I learned from things I actually built, tested, or shipped. Anchored to a real problem and the lesson I took from it. AI and automation show up here naturally as the accelerant, not as a standalone topic.
 
 ## Content Rules
 
-- Topics across both sections tie to growth, experimentation, and monetization
+- Topics tie to growth, experimentation, monetization, or the analytical/engineering craft behind them
 - AI building is woven through Ship Notes as the how, not a standalone category
-- Every post passes this filter: comes from real experience, useful to your team, requires your specific background to write credibly
+- Every post passes this filter: comes from real experience, useful to future-me or someone I'd share it with, and requires my specific background to write credibly
 
 ## Guardrail
 
-If a content request drifts from this strategy — wrong topic, no real experience anchor, not useful to a team member, or treats AI as a standalone subject rather than an accelerant — reject it or redirect the user back to the site purpose.
+If a content request drifts from this — wrong topic, no real experience anchor, generic advice anyone could write, or treats AI as a standalone subject rather than an accelerant — reject it or redirect back to the site purpose.
 
 ## Tech Stack
 
