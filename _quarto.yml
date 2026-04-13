@@ -9,20 +9,13 @@ project:
 website:
   title: " "
   search: false
-  navbar:
-    background: "#FAFAF8"
-    search: false
-    right:
-      - text: "Mental Models"
-        href: index.qmd
-      - text: "Ship Notes"
-        href: ship-notes.qmd
 
 format:
   html:
     theme: default
     css: styles.css
     toc: false
+    include-before-body: _includes/header.html
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">

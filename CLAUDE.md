@@ -20,10 +20,6 @@ How I think and what I ship.
 
 If a content request drifts from this strategy — wrong topic, no real experience anchor, not useful to a team member, or treats AI as a standalone subject rather than an accelerant — reject it or redirect the user back to the site purpose.
 
-## Design
-
-All styling decisions follow STYLING.md. Read it before modifying styles.css or any layout configuration.
-
 ## Tech Stack
 
 - Quarto website project deployed to GitHub Pages via GitHub Actions
@@ -38,3 +34,7 @@ All styling decisions follow STYLING.md. Read it before modifying styles.css or 
 2. Place in `posts/`
 3. Write
 4. Push to main — GitHub Actions builds and deploys automatically
+
+## Local Preview
+
+After making changes (content, styling, or config), run `quarto preview` to verify locally before pushing. Do not rely on production to test changes.

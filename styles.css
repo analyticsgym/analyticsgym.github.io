@@ -35,7 +35,7 @@ p, li { color: var(--text) !important; font-weight: 400 !important; }
   max-width: 1040px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding: 3rem 2rem 6rem 2rem !important;
+  padding: 1.5rem 2rem 5rem 2rem !important;
 }
 
 main.content {
@@ -139,13 +139,56 @@ img {
   box-shadow: none !important;
 }
 
-/* --- Navbar --- */
-.navbar {
-  background-color: var(--bg) !important;
-  border-bottom: 1px solid var(--border) !important;
-  box-shadow: none !important;
-  padding: 1rem 2rem !important;
+/* --- Site header (centered title + tabs) --- */
+.site-header {
+  text-align: center;
+  padding: 0.15rem 1.5rem 0.65rem 1.5rem;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.15rem;
 }
+.site-title {
+  display: inline-block;
+  font-family: var(--font-heading) !important;
+  font-weight: 300;
+  font-size: 1.65rem;
+  letter-spacing: 0.02em;
+  color: var(--text) !important;
+  text-decoration: none !important;
+  line-height: 1.1;
+  margin-bottom: 0.65rem;
+}
+.site-title:hover { color: var(--accent) !important; }
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.site-nav a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+.site-nav a:hover { color: var(--text) !important; }
+.site-nav a.active {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent);
+}
+
+/* Kill any residual Quarto navbar */
+#quarto-header, .navbar { display: none !important; }
+
+/* Remove top padding that assumed fixed navbar */
+body.nav-fixed { padding-top: 0 !important; }
+#quarto-content { padding-top: 0 !important; }
+
+/* Hide empty title block on listing pages */
+body.quarto-listing-page #title-block-header { display: none !important; }
 
 /* Hide brand/title — user removed site branding */
 .navbar-brand,
@@ -166,7 +209,7 @@ img {
 .navbar-nav .nav-link.active { color: var(--accent) !important; text-decoration: none !important; }
 
 /* --- Listing --- */
-.quarto-listing { margin-top: 1rem !important; }
+.quarto-listing { margin-top: 0 !important; }
 
 /* Flatten Quarto's default two-column post layout */
 .quarto-post,
@@ -333,9 +376,56 @@ th { font-weight: 600 !important; background: transparent !important; }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  #quarto-content, main.content, .page-columns { padding: 2rem 1.25rem !important; }
-  h1, .title { font-size: 1.9rem !important; }
-  h2 { font-size: 1.4rem !important; }
-  .listing-title { font-size: 1.4rem !important; }
-  .navbar { padding: 0.75rem 1rem !important; }
+  body { font-size: 16.5px !important; line-height: 1.7 !important; }
+
+  #quarto-content,
+  main.content,
+  .page-columns {
+    padding: 0.5rem 1.1rem 2.5rem !important;
+    max-width: 100% !important;
+  }
+
+  h1, .title { font-size: 1.75rem !important; line-height: 1.2 !important; margin-bottom: 0.75rem !important; }
+  h2 { font-size: 1.35rem !important; margin-top: 2.25rem !important; }
+  h3 { font-size: 1.15rem !important; margin-top: 1.75rem !important; }
+  p { margin-bottom: 1.15rem !important; }
+
+  #title-block-header .quarto-title,
+  .quarto-title-block .quarto-title { margin-bottom: 1.25rem !important; }
+
+  .listing-title,
+  .quarto-listing .listing-title { font-size: 1.3rem !important; line-height: 1.3 !important; }
+  .quarto-listing .list-group-item,
+  .quarto-listing-default .list-group-item { padding: 1.25rem 0 !important; }
+
+  .site-header {
+    padding: 1.5rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .site-title {
+    font-size: 1.9rem;
+    margin-bottom: 0.85rem;
+    white-space: nowrap;
+  }
+  .site-nav { gap: 1.5rem; }
+  .site-nav a { font-size: 0.95rem; }
+
+  pre { padding: 0.85rem !important; font-size: 0.82rem !important; }
+  blockquote { margin: 1.25rem 0 !important; padding-left: 1rem !important; }
+  img { margin: 1.25rem 0 !important; }
+  hr { margin: 2rem 0 !important; }
+  ul, ol { padding-left: 1.25rem !important; }
+  table { font-size: 0.9rem !important; }
+  th, td { padding: 0.5rem 0.65rem !important; }
+}
+
+@media (max-width: 420px) {
+  .site-header { padding: 1.25rem 0.75rem 0.85rem; margin-bottom: 1.25rem; }
+  .site-title { font-size: 1.7rem; margin-bottom: 0.75rem; }
+  .site-nav { gap: 1.15rem; }
+  .site-nav a { font-size: 0.9rem; }
+
+  #quarto-content, main.content, .page-columns { padding: 0.25rem 1rem 2rem !important; }
+  h1, .title { font-size: 1.55rem !important; }
+  .listing-title, .quarto-listing .listing-title { font-size: 1.2rem !important; }
 }

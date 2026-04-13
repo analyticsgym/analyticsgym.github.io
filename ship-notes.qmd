@@ -1,5 +1,6 @@
 ---
-title: "Ship Notes"
+title: ""
+pagetitle: "Ship Notes"
 listing:
   id: ship-notes-listing
   contents: posts

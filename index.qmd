@@ -1,5 +1,6 @@
 ---
-title: "Mental Models"
+title: ""
+pagetitle: "Mental Models"
 listing:
   id: mental-models-listing
   contents: posts
