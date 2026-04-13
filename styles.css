@@ -168,6 +168,20 @@ img {
 /* --- Listing --- */
 .quarto-listing { margin-top: 1rem !important; }
 
+/* Flatten Quarto's default two-column post layout */
+.quarto-post,
+.quarto-listing .quarto-post.image-right {
+  display: block !important;
+  grid-template-columns: none !important;
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-top: 1.75rem !important;
+  padding-bottom: 1.75rem !important;
+}
+.quarto-post .body { padding: 0 !important; }
+.quarto-post .metadata,
+.quarto-post .thumbnail { display: none !important; }
+
 .quarto-listing .card,
 .listing-item,
 .quarto-grid-item {
