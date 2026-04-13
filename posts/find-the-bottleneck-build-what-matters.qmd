@@ -4,8 +4,6 @@ status: mature
 categories: [Mental Model]
 ---
 
-# Find the Bottleneck, Build What Matters
-
 *A practical guide to using structured problem-solving — inspired by Elon Musk's "Algorithm" — to decide what agentic workflows your team should actually build.*
 
 ---
