@@ -8,12 +8,12 @@ project:
     - "posts/"
 
 website:
-  title: "Analytics Gym"
+  title: " "
   navbar:
-    left:
-      - text: "Analytics Gym"
-        href: index.qmd
+    background: "#FAFAF8"
     right:
+      - text: "Library"
+        href: index.qmd
       - text: "Mental Models"
         href: mental-models.qmd
       - text: "Ship Notes"

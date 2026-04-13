@@ -3,7 +3,6 @@
    Single source of truth: STYLING.md
    ============================================ */
 
-/* --- CSS Variables --- */
 :root {
   --bg: #FAFAF8;
   --text: #111111;
@@ -14,10 +13,10 @@
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --content-width: 680px;
+  --content-width: 720px;
 }
 
-/* --- Base Reset --- */
+/* --- Base --- */
 body {
   background-color: var(--bg) !important;
   color: var(--text) !important;
@@ -29,70 +28,49 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p, li {
-  font-weight: 400 !important;
-  color: var(--text) !important;
-}
+p, li { color: var(--text) !important; font-weight: 400 !important; }
 
-/* --- Content Width --- */
-.page-columns .content {
+/* --- Content width + left-aligned layout --- */
+#quarto-content,
+main.content,
+.page-columns {
   max-width: var(--content-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 3rem 2rem 6rem 2rem !important;
 }
 
-#quarto-content {
-  max-width: var(--content-width) !important;
-  margin: 0 auto !important;
-  padding: 4rem 2rem 4rem 2rem !important;
+.quarto-title-block,
+.quarto-title,
+#title-block-header,
+header#title-block-header {
+  text-align: left !important;
 }
 
-main.content {
-  max-width: var(--content-width) !important;
-  margin: 0 auto !important;
+#title-block-header .quarto-title,
+.quarto-title-block .quarto-title {
+  margin-bottom: 2rem !important;
 }
 
-/* --- Typography — Headings --- */
+/* Hide the .subtitle if empty / remove extra meta */
+.quarto-title-meta { display: none !important; }
+
+/* --- Headings --- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading) !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   color: var(--text) !important;
-  letter-spacing: 0.02em;
-  line-height: 1.3;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  text-align: left !important;
 }
+h1, .title { font-size: 2.4rem !important; margin-bottom: 1rem !important; }
+h2 { font-size: 1.7rem !important; margin-top: 3rem !important; margin-bottom: 1rem !important; }
+h3 { font-size: 1.3rem !important; margin-top: 2.25rem !important; margin-bottom: 0.6rem !important; }
+h4, h5, h6 { font-size: 1.05rem !important; margin-top: 1.75rem !important; margin-bottom: 0.4rem !important; }
 
-h1, .title {
-  font-size: 2.5rem !important;
-  font-weight: 300 !important;
-  margin-bottom: 1rem !important;
-}
-
-h2 {
-  font-size: 1.8rem !important;
-  margin-top: 3rem !important;
-  margin-bottom: 1rem !important;
-}
-
-h3 {
-  font-size: 1.4rem !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-h4, h5, h6 {
-  font-size: 1.1rem !important;
-  font-weight: 400 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-/* --- Typography — Body --- */
-p {
-  font-weight: 300 !important;
-  margin-bottom: 1.5rem !important;
-}
-
-strong, b {
-  font-weight: 400 !important;
-}
+p { margin-bottom: 1.4rem !important; }
+strong, b { font-weight: 600 !important; }
 
 /* --- Links --- */
 a {
@@ -100,78 +78,50 @@ a {
   text-decoration: underline !important;
   text-underline-offset: 3px !important;
   text-decoration-thickness: 1px !important;
-  transition: color 0.2s ease !important;
+  transition: color 0.15s ease !important;
 }
-
-a:hover {
-  color: var(--text) !important;
-}
+a:hover { color: var(--text) !important; }
 
 /* --- Blockquotes --- */
 blockquote {
   border-left: 2px solid var(--accent) !important;
-  border-right: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
+  border-right: none !important; border-top: none !important; border-bottom: none !important;
   background: transparent !important;
-  padding: 0.5rem 0 0.5rem 1.5rem !important;
-  margin: 2rem 0 !important;
+  padding: 0.25rem 0 0.25rem 1.25rem !important;
+  margin: 1.75rem 0 !important;
   font-style: italic !important;
   color: var(--text) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+blockquote p { color: var(--text) !important; }
 
-blockquote p {
-  color: var(--text) !important;
-}
-
-/* --- Code Blocks --- */
+/* --- Code --- */
 pre {
   background-color: var(--code-bg) !important;
   border: 1px solid var(--border) !important;
   border-radius: 0 !important;
-  padding: 1.25rem !important;
+  padding: 1.1rem !important;
   font-family: var(--font-mono) !important;
-  font-weight: 300 !important;
   font-size: 0.9rem !important;
   overflow-x: auto;
   box-shadow: none !important;
 }
-
-code {
-  font-family: var(--font-mono) !important;
-  font-weight: 300 !important;
-  font-size: 0.9em !important;
-}
-
+code { font-family: var(--font-mono) !important; font-size: 0.9em !important; }
 p code, li code {
   background-color: var(--code-bg) !important;
-  padding: 0.15em 0.4em !important;
+  padding: 0.1em 0.35em !important;
   border: 1px solid var(--border) !important;
   border-radius: 0 !important;
 }
 
 /* --- Lists --- */
-ul, ol {
-  padding-left: 1.5rem !important;
-}
+ul, ol { padding-left: 1.5rem !important; }
+li { margin-bottom: 0.5rem !important; }
+ul li::marker { color: var(--muted) !important; }
 
-li {
-  margin-bottom: 0.75rem !important;
-  font-weight: 300 !important;
-}
-
-ul li::marker {
-  color: var(--muted) !important;
-}
-
-/* --- Horizontal Rules --- */
-hr {
-  border: none !important;
-  border-top: 1px solid var(--border) !important;
-  margin: 3rem 0 !important;
-}
+/* --- Rule --- */
+hr { border: none !important; border-top: 1px solid var(--border) !important; margin: 3rem 0 !important; }
 
 /* --- Images --- */
 img {
@@ -190,19 +140,12 @@ img {
   padding: 1rem 2rem !important;
 }
 
-.navbar-brand, .navbar-title {
-  font-family: var(--font-heading) !important;
-  font-weight: 400 !important;
-  font-size: 1.4rem !important;
-  color: var(--text) !important;
-  letter-spacing: 0.03em;
-  text-decoration: none !important;
-}
+/* Hide brand/title — user removed site branding */
+.navbar-brand,
+.navbar-title,
+.navbar-brand-container { display: none !important; }
 
-.navbar-nav .nav-link,
-.navbar-brand {
-  text-decoration: none !important;
-}
+.navbar-nav { gap: 0.5rem; }
 
 .navbar-nav .nav-link {
   font-family: var(--font-body) !important;
@@ -210,21 +153,14 @@ img {
   font-size: 1rem !important;
   color: var(--text) !important;
   text-decoration: none !important;
-  padding: 0.25rem 1rem !important;
+  padding: 0.25rem 0.9rem !important;
 }
-
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--accent) !important;
-  text-decoration: none !important;
-}
+.navbar-nav .nav-link.active { color: var(--accent) !important; text-decoration: none !important; }
 
-/* --- Listing Page --- */
-.quarto-listing {
-  margin-top: 2rem !important;
-}
+/* --- Listing --- */
+.quarto-listing { margin-top: 1rem !important; }
 
-/* Remove card styling */
 .quarto-listing .card,
 .listing-item,
 .quarto-grid-item {
@@ -235,140 +171,125 @@ img {
   padding: 0 !important;
 }
 
-/* Listing titles */
+.quarto-listing .list-group-item,
+.quarto-listing-default .list-group-item {
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  padding: 1.75rem 0 !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.quarto-listing-default .list-group-item:first-child { padding-top: 1rem !important; }
+
 .listing-title,
 .quarto-listing .listing-title {
   font-family: var(--font-heading) !important;
   font-weight: 400 !important;
   font-size: 1.7rem !important;
   color: var(--text) !important;
-  margin-bottom: 0.25rem !important;
+  margin: 0 0 0.4rem 0 !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
 }
-
-.listing-title a {
+.listing-title a,
+.listing-title a:visited,
+.quarto-listing .listing-title a {
   color: var(--text) !important;
-}
-
-.listing-title a:hover,
-.listing-title:hover {
-  color: var(--accent) !important;
   text-decoration: none !important;
 }
+.listing-title a:hover { color: var(--accent) !important; text-decoration: none !important; }
 
-/* Listing categories/metadata */
+/* Kill Quarto's default "badge" look for categories */
 .listing-category,
-.listing-categories,
 .quarto-listing .listing-category {
-  font-size: 0.85rem !important;
-  color: var(--muted) !important;
-  font-weight: 300 !important;
-}
-
-/* Category filter buttons */
-.quarto-listing-category .category,
-.quarto-listing-category-title {
+  display: inline !important;
   font-family: var(--font-body) !important;
-  font-weight: 300 !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
   color: var(--muted) !important;
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
-  padding: 0.25rem 0.75rem !important;
-  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0.75rem 0 0 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  cursor: pointer;
 }
+.listing-category:hover { color: var(--accent) !important; }
+.listing-categories { margin-top: 0 !important; }
 
+/* Category filter sidebar */
+.quarto-listing-category-title {
+  font-family: var(--font-body) !important;
+  font-weight: 400 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--muted) !important;
+  margin-bottom: 0.75rem !important;
+}
+.quarto-listing-category .category {
+  font-family: var(--font-body) !important;
+  font-weight: 400 !important;
+  font-size: 0.95rem !important;
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.15rem 0 !important;
+  box-shadow: none !important;
+  display: block;
+  cursor: pointer;
+}
 .quarto-listing-category .category:hover,
 .quarto-listing-category .category.active {
   color: var(--accent) !important;
   background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
-/* Hide dates everywhere */
+/* Hide dates */
 .listing-date,
 .quarto-listing .listing-date,
 .metadata .date,
-.article-date {
-  display: none !important;
-}
+.article-date { display: none !important; }
 
-/* Listing item spacing */
-.quarto-listing .list-group-item,
-.quarto-listing-default .list-group-item {
-  border: none !important;
-  border-bottom: 1px solid var(--border) !important;
-  border-radius: 0 !important;
-  padding: 1.5rem 0 !important;
-  background: transparent !important;
-}
-
-/* --- Table of Contents --- */
+/* --- TOC --- */
 .sidebar nav[role="doc-toc"] {
   border-left: 1px solid var(--border) !important;
   padding-left: 1rem !important;
 }
-
 .sidebar nav[role="doc-toc"] a {
   font-family: var(--font-body) !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 0.85rem !important;
   color: var(--muted) !important;
+  text-decoration: none !important;
 }
-
 .sidebar nav[role="doc-toc"] a:hover,
-.sidebar nav[role="doc-toc"] a.active {
-  color: var(--accent) !important;
-}
+.sidebar nav[role="doc-toc"] a.active { color: var(--accent) !important; }
 
 /* --- Tables --- */
-table {
-  border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 2rem 0 !important;
-}
+table { border-collapse: collapse !important; width: 100% !important; margin: 2rem 0 !important; }
+th, td { border: 1px solid var(--border) !important; padding: 0.65rem 0.9rem !important; font-weight: 400 !important; text-align: left !important; }
+th { font-weight: 600 !important; background: transparent !important; }
 
-th, td {
-  border: 1px solid var(--border) !important;
-  padding: 0.75rem 1rem !important;
-  font-weight: 300 !important;
-  text-align: left !important;
-}
-
-th {
-  font-weight: 400 !important;
-  background: transparent !important;
-}
-
-/* --- Remove all Quarto default decorations --- */
-.callout,
-.card,
-.card-body,
-.card-header,
-.card-footer {
+/* --- Strip Quarto decorations --- */
+.callout, .card, .card-body, .card-header, .card-footer {
   background: transparent !important;
   border: 1px solid var(--border) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-
-/* Remove footer */
-.nav-footer {
-  display: none !important;
-}
+.nav-footer { display: none !important; }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  #quarto-content {
-    padding: 2rem 1.25rem !important;
-  }
-
-  h1, .title {
-    font-size: 2rem !important;
-  }
-
-  h2 {
-    font-size: 1.5rem !important;
-  }
+  #quarto-content, main.content, .page-columns { padding: 2rem 1.25rem !important; }
+  h1, .title { font-size: 1.9rem !important; }
+  h2 { font-size: 1.4rem !important; }
+  .listing-title { font-size: 1.4rem !important; }
+  .navbar { padding: 0.75rem 1rem !important; }
 }

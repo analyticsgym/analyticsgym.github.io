@@ -1,6 +1,5 @@
 ---
-title: "Analytics Gym"
-subtitle: "Frameworks for growth, experimentation, and what I ship."
+pagetitle: "Library"
 listing:
   id: posts-listing
   contents: posts
@@ -8,5 +7,5 @@ listing:
   categories: true
   type: default
   fields: [title, categories]
-page-layout: full
+page-layout: article
 ---

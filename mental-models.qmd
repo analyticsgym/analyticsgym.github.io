@@ -1,6 +1,5 @@
 ---
 title: "Mental Models"
-subtitle: "Frameworks for growth decisions, experimentation judgment, and analytical reasoning."
 listing:
   id: mental-models-listing
   contents: posts
@@ -10,5 +9,5 @@ listing:
   fields: [title, categories]
   include:
     categories: "Mental Model"
-page-layout: full
+page-layout: article
 ---

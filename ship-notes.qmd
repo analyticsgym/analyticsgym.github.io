@@ -1,6 +1,5 @@
 ---
 title: "Ship Notes"
-subtitle: "Lessons from tools built, experiments designed, and analysis shipped."
 listing:
   id: ship-notes-listing
   contents: posts
@@ -10,5 +9,5 @@ listing:
   fields: [title, categories]
   include:
     categories: "Ship Note"
-page-layout: full
+page-layout: article
 ---
