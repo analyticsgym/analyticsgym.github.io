@@ -1,0 +1,12 @@
+---
+title: "Analytics Gym"
+subtitle: "Frameworks for growth, experimentation, and what I ship."
+listing:
+  id: posts-listing
+  contents: posts
+  sort: "title asc"
+  categories: true
+  type: default
+  fields: [title, categories]
+page-layout: full
+---

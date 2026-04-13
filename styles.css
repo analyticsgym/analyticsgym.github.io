@@ -1,0 +1,353 @@
+/* ============================================
+   Analytics Gym — Japanese Minimalism (間 Ma)
+   Single source of truth: STYLING.md
+   ============================================ */
+
+/* --- CSS Variables --- */
+:root {
+  --bg: #FAFAF8;
+  --text: #2C2C2C;
+  --accent: #8B4513;
+  --muted: #9B9B93;
+  --border: #E8E6E1;
+  --code-bg: #F5F4F0;
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --content-width: 680px;
+}
+
+/* --- Base Reset --- */
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Content Width --- */
+.page-columns .content {
+  max-width: var(--content-width) !important;
+}
+
+#quarto-content {
+  max-width: var(--content-width) !important;
+  margin: 0 auto !important;
+  padding: 4rem 2rem 4rem 2rem !important;
+}
+
+main.content {
+  max-width: var(--content-width) !important;
+  margin: 0 auto !important;
+}
+
+/* --- Typography — Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 300 !important;
+  color: var(--text) !important;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+h1, .title {
+  font-size: 2.5rem !important;
+  font-weight: 300 !important;
+  margin-bottom: 1rem !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1rem !important;
+}
+
+h3 {
+  font-size: 1.4rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+h4, h5, h6 {
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* --- Typography — Body --- */
+p {
+  font-weight: 300 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+strong, b {
+  font-weight: 400 !important;
+}
+
+/* --- Links --- */
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  transition: text-decoration 0.2s ease !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* --- Blockquotes --- */
+blockquote {
+  border-left: 2px solid var(--accent) !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background: transparent !important;
+  padding: 0.5rem 0 0.5rem 1.5rem !important;
+  margin: 2rem 0 !important;
+  font-style: italic !important;
+  color: var(--text) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+blockquote p {
+  color: var(--text) !important;
+}
+
+/* --- Code Blocks --- */
+pre {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  padding: 1.25rem !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 300 !important;
+  font-size: 0.9rem !important;
+  overflow-x: auto;
+  box-shadow: none !important;
+}
+
+code {
+  font-family: var(--font-mono) !important;
+  font-weight: 300 !important;
+  font-size: 0.9em !important;
+}
+
+p code, li code {
+  background-color: var(--code-bg) !important;
+  padding: 0.15em 0.4em !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+}
+
+/* --- Lists --- */
+ul, ol {
+  padding-left: 1.5rem !important;
+}
+
+li {
+  margin-bottom: 0.75rem !important;
+  font-weight: 300 !important;
+}
+
+ul li::marker {
+  color: var(--muted) !important;
+}
+
+/* --- Horizontal Rules --- */
+hr {
+  border: none !important;
+  border-top: 1px solid var(--border) !important;
+  margin: 3rem 0 !important;
+}
+
+/* --- Images --- */
+img {
+  max-width: 100% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 2rem 0 !important;
+  box-shadow: none !important;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: none !important;
+  padding: 1rem 2rem !important;
+}
+
+.navbar-brand, .navbar-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 300 !important;
+  font-size: 1.4rem !important;
+  color: var(--text) !important;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--font-body) !important;
+  font-weight: 300 !important;
+  font-size: 0.95rem !important;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  padding: 0.25rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+}
+
+/* --- Listing Page --- */
+.quarto-listing {
+  margin-top: 2rem !important;
+}
+
+/* Remove card styling */
+.quarto-listing .card,
+.listing-item,
+.quarto-grid-item {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Listing titles */
+.listing-title,
+.quarto-listing .listing-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 300 !important;
+  font-size: 1.4rem !important;
+  color: var(--text) !important;
+}
+
+.listing-title:hover {
+  color: var(--accent) !important;
+}
+
+/* Listing categories/metadata */
+.listing-category,
+.listing-categories,
+.quarto-listing .listing-category {
+  font-size: 0.85rem !important;
+  color: var(--muted) !important;
+  font-weight: 300 !important;
+}
+
+/* Category filter buttons */
+.quarto-listing-category .category,
+.quarto-listing-category-title {
+  font-family: var(--font-body) !important;
+  font-weight: 300 !important;
+  font-size: 0.9rem !important;
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.25rem 0.75rem !important;
+  box-shadow: none !important;
+}
+
+.quarto-listing-category .category:hover,
+.quarto-listing-category .category.active {
+  color: var(--accent) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide dates everywhere */
+.listing-date,
+.quarto-listing .listing-date,
+.metadata .date,
+.article-date {
+  display: none !important;
+}
+
+/* Listing item spacing */
+.quarto-listing .list-group-item,
+.quarto-listing-default .list-group-item {
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  padding: 1.5rem 0 !important;
+  background: transparent !important;
+}
+
+/* --- Table of Contents --- */
+.sidebar nav[role="doc-toc"] {
+  border-left: 1px solid var(--border) !important;
+  padding-left: 1rem !important;
+}
+
+.sidebar nav[role="doc-toc"] a {
+  font-family: var(--font-body) !important;
+  font-weight: 300 !important;
+  font-size: 0.85rem !important;
+  color: var(--muted) !important;
+}
+
+.sidebar nav[role="doc-toc"] a:hover,
+.sidebar nav[role="doc-toc"] a.active {
+  color: var(--accent) !important;
+}
+
+/* --- Tables --- */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 2rem 0 !important;
+}
+
+th, td {
+  border: 1px solid var(--border) !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 300 !important;
+  text-align: left !important;
+}
+
+th {
+  font-weight: 400 !important;
+  background: transparent !important;
+}
+
+/* --- Remove all Quarto default decorations --- */
+.callout,
+.card,
+.card-body,
+.card-header,
+.card-footer {
+  background: transparent !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove footer */
+.nav-footer {
+  display: none !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  #quarto-content {
+    padding: 2rem 1.25rem !important;
+  }
+
+  h1, .title {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}

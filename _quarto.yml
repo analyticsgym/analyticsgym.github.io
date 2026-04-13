@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "posts/"
+
+website:
+  title: "Analytics Gym"
+  navbar:
+    left:
+      - text: "Analytics Gym"
+        href: index.qmd
+    right:
+      - text: "Library"
+        href: index.qmd
+      - text: "GitHub"
+        href: https://github.com/analyticsgym
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    toc: true
+    toc-location: right
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
