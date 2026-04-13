@@ -221,8 +221,18 @@ img {
 .listing-category:hover { color: var(--accent) !important; }
 .listing-categories { margin-top: 0 !important; }
 
-/* Category filter sidebar */
-.quarto-listing-category-title {
+/* Hide the category-filter sidebar entirely on listings */
+.quarto-listing-category,
+.quarto-listing-category-title,
+div[class*="quarto-listing-category"] { display: none !important; }
+
+/* Hide search icon in navbar */
+.quarto-search,
+.aa-Autocomplete,
+.nav-item.compact { display: none !important; }
+
+/* (kept for fallback if re-enabled) */
+.quarto-listing-category-title--fallback {
   font-family: var(--font-body) !important;
   font-weight: 400 !important;
   font-size: 0.8rem !important;
