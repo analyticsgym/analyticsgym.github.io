@@ -3,6 +3,8 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
+    - "mental-models.qmd"
+    - "ship-notes.qmd"
     - "posts/"
 
 website:
@@ -12,8 +14,10 @@ website:
       - text: "Analytics Gym"
         href: index.qmd
     right:
-      - text: "Library"
-        href: index.qmd
+      - text: "Mental Models"
+        href: mental-models.qmd
+      - text: "Ship Notes"
+        href: ship-notes.qmd
       - text: "GitHub"
         href: https://github.com/analyticsgym
 

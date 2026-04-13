@@ -25,10 +25,10 @@ The site follows "Ma" (間) — the Japanese concept that emptiness is not absen
 ## Color Palette
 
 - Background: #FAFAF8 (warm off-white, like washi paper)
-- Text: #2C2C2C (soft black, never pure #000)
-- Accent: #8B4513 (sabi brown — like aged wood or rust)
-- Muted: #9B9B93 (stone gray, for secondary text and borders)
-- Borders: 1px solid #E8E6E1 (barely visible, like pencil lines)
+- Text: #111111 (near-black, high contrast for readability)
+- Accent: #6B3410 (deep sabi brown — like aged wood or rust)
+- Muted: #5A5A55 (warm gray, readable secondary text)
+- Borders: 1px solid #C8C6C1 (pencil-line, visible but quiet)
 - Dark mode: do NOT implement. Single theme only.
 
 ## Layout Rules

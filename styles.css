@@ -6,10 +6,10 @@
 /* --- CSS Variables --- */
 :root {
   --bg: #FAFAF8;
-  --text: #2C2C2C;
-  --accent: #8B4513;
-  --muted: #9B9B93;
-  --border: #E8E6E1;
+  --text: #111111;
+  --accent: #6B3410;
+  --muted: #5A5A55;
+  --border: #C8C6C1;
   --code-bg: #F5F4F0;
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'IBM Plex Sans', sans-serif;
@@ -22,11 +22,16 @@ body {
   background-color: var(--bg) !important;
   color: var(--text) !important;
   font-family: var(--font-body) !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 18px !important;
-  line-height: 1.8 !important;
+  line-height: 1.75 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p, li {
+  font-weight: 400 !important;
+  color: var(--text) !important;
 }
 
 /* --- Content Width --- */
@@ -92,12 +97,14 @@ strong, b {
 /* --- Links --- */
 a {
   color: var(--accent) !important;
-  text-decoration: none !important;
-  transition: text-decoration 0.2s ease !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 1px !important;
+  transition: color 0.2s ease !important;
 }
 
 a:hover {
-  text-decoration: underline !important;
+  color: var(--text) !important;
 }
 
 /* --- Blockquotes --- */
@@ -185,22 +192,29 @@ img {
 
 .navbar-brand, .navbar-title {
   font-family: var(--font-heading) !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 1.4rem !important;
   color: var(--text) !important;
   letter-spacing: 0.03em;
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  text-decoration: none !important;
 }
 
 .navbar-nav .nav-link {
   font-family: var(--font-body) !important;
-  font-weight: 300 !important;
-  font-size: 0.95rem !important;
-  color: var(--muted) !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: var(--text) !important;
   text-decoration: none !important;
   padding: 0.25rem 1rem !important;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: var(--accent) !important;
   text-decoration: none !important;
 }
@@ -225,13 +239,20 @@ img {
 .listing-title,
 .quarto-listing .listing-title {
   font-family: var(--font-heading) !important;
-  font-weight: 300 !important;
-  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  font-size: 1.7rem !important;
+  color: var(--text) !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.listing-title a {
   color: var(--text) !important;
 }
 
+.listing-title a:hover,
 .listing-title:hover {
   color: var(--accent) !important;
+  text-decoration: none !important;
 }
 
 /* Listing categories/metadata */
